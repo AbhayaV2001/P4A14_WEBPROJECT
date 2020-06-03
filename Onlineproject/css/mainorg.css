@@ -1,0 +1,185 @@
+body
+{
+overflow-x:hidden;
+width:100%;
+font: 15px "Century Gothic", "Times Roman", sans-serif;
+background:#eee;
+min-height:550px;
+background-attachment:fixed;
+}
+.bg
+{
+width: 100%;
+height: auto;
+}
+
+.bg1
+{
+background:url(../image/quiz.png);
+width: 100%;
+height: auto;
+background-size: 100% 100%;
+}
+
+@font-face {
+   font-family: 'typo';
+    src: url('../fonts/typo.ttf');
+	}
+
+@font-face {
+   font-family: 'gothic';
+    src: url('../fonts/gothics.ttf');
+	}
+
+.panel{
+border-color:#eee;
+margin:40px;
+padding:20px;
+font: 15px "Century Gothic", "Times Roman", sans-serif;
+}
+
+.title
+{
+font-family:'typo';
+}
+
+.header
+{
+background-image: linear-gradient(to right, #7A20E1, #4E03E0);
+height:70px;
+}
+.logo
+{
+font-family:'typo';
+font-size:45px;
+color:#ffff;
+margin:15px;
+padding: 5px; 
+}
+
+.title1{
+font: 18px "Century Gothic", "Times Roman", sans-serif;
+
+}
+.title2{
+font-family: 'Ubuntu', sans-serif;
+font-size:20px;
+}
+
+
+.sub1
+{
+width:90px;
+color:#ffff;
+background:#4E03E0;
+font-size:15px;
+height:35px;
+margin:20px;
+padding:10px;
+width:100px;
+}
+
+.sub1 : hover
+{
+  background : #ffff;
+}
+
+.sub
+{
+width:100%;
+background-color:#4E03E0;
+font-size:19px;
+padding:4px;
+margin-top:15px;
+margin-right:20px;
+color: #ffff;
+border-radius: 10px;
+border-color: #ffff;
+font-weight: bold;
+outline: none;
+}
+.sub:hover
+{
+
+color: black;
+}
+
+.footer
+{
+font-size:15px;
+text-align:center;
+background-image: linear-gradient(to right, #7A20E1, #4E03E0);
+}
+.footer a
+{
+margin:25px;
+color: #ffff;
+text-decoration:none;
+font: 15px "Century Gothic", "Times Roman", sans-serif;
+font-weight: bold;
+}
+.footer a:hover
+{
+text-decoration:none;
+color: black;
+border-color: #7A20E1;
+}
+
+.box
+{
+padding: 9px;
+}
+hr{
+color:#000000;
+}
+.top
+{
+margin-top: 20px;
+}
+.log1
+{
+font: 15px 'Ubuntu', sans-serif;
+color:#ffff;
+margin-left:10px;
+}
+
+.log
+{
+margin:10px;
+margin-right:60px;
+margin-left:5px;
+color:#ffff;
+text-decoration:none;
+font-size:20px;
+font-size:15px;
+}
+.log:hover
+{
+color:black;
+border-color:#ffff;
+text-decoration:none;
+}
+.bg-blue {
+  background-image: linear-gradient(to right, #7A20E1, #4E03E0);
+}
+.container-fluid {
+  padding: 60px 50px;
+  background-color: #ffff;
+}
+
+.logonew {
+  color: #4E03E0;
+  font-size: 200px;
+}
+.logo-small {
+  color: #ffff;
+  font-size: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .col-sm-4 {
+    text-align: center;
+    margin: 25px 0;
+  }
+
+
