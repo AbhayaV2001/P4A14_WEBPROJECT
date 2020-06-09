@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 09, 2020 at 12:30 PM
+-- Generation Time: Jun 09, 2020 at 04:07 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -153,9 +153,9 @@ INSERT INTO `history` (`email`, `eid`, `score`, `level`, `sahi`, `wrong`, `date`
 --
 
 CREATE TABLE `options` (
-  `qid` varchar(13) DEFAULT NULL,
+  `qid` varchar(13) NOT NULL,
   `option` varchar(5000) NOT NULL,
-  `optionid` text NOT NULL
+  `optionid` varchar(13) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -511,7 +511,7 @@ ALTER TABLE `history`
 -- Indexes for table `options`
 --
 ALTER TABLE `options`
-  ADD KEY `qid` (`qid`);
+  ADD PRIMARY KEY (`qid`,`optionid`);
 
 --
 -- Indexes for table `questions`
