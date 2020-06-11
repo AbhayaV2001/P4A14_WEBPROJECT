@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 09, 2020 at 04:07 PM
+-- Generation Time: Jun 11, 2020 at 01:32 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -48,8 +48,8 @@ INSERT INTO `admin` (`admin_id`, `email`, `password`) VALUES
 --
 
 CREATE TABLE `answer` (
-  `qid` text NOT NULL,
-  `ansid` text NOT NULL
+  `qid` varchar(13) NOT NULL,
+  `ansid` varchar(13) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -111,7 +111,7 @@ INSERT INTO `answer` (`qid`, `ansid`) VALUES
 
 CREATE TABLE `history` (
   `email` varchar(50) NOT NULL,
-  `eid` varchar(13) DEFAULT NULL,
+  `eid` varchar(13) NOT NULL,
   `score` int(11) NOT NULL,
   `level` int(11) NOT NULL,
   `sahi` int(11) NOT NULL,
@@ -124,27 +124,24 @@ CREATE TABLE `history` (
 --
 
 INSERT INTO `history` (`email`, `eid`, `score`, `level`, `sahi`, `wrong`, `date`) VALUES
-('dhanrajk.cs18@bmsce.ac.in', '5eb3e84e4cc86', 3, 5, 3, 2, '2020-05-07 11:56:30'),
-('sakshay.cs18@bmsce.ac.in', '5eb3de35529a2', 3, 5, 3, 2, '2020-05-07 11:58:13'),
 ('abhayav.cs18@bmsce.ac.in', '5eb3e3b7494aa', 4, 5, 2, 3, '2020-05-07 11:43:30'),
-('chandanc.cs18@bmsce.ac.in', '5eb3e1a5bd9b4', 4, 5, 4, 1, '2020-05-07 11:52:44'),
-('dhanrajk.cs18@bmsce.ac.in', '5eb3f4d26c22a', 4, 5, 2, 3, '2020-05-07 11:55:45'),
-('sakshay.cs18@bmsce.ac.in', '5eb3e604084dc', 4, 5, 2, 3, '2020-05-07 11:39:56'),
-('sakshay.cs18@bmsce.ac.in', '5eb3e1a5bd9b4', 4, 5, 4, 1, '2020-05-07 11:40:27'),
-('chandanc.cs18@bmsce.ac.in', '5eb3e84e4cc86', 5, 5, 5, 0, '2020-05-07 11:53:33'),
-('chandanc.cs18@bmsce.ac.in', '5eb3de35529a2', 5, 5, 5, 0, '2020-05-07 11:54:32'),
-('sakshay.cs18@bmsce.ac.in', '5eb3e84e4cc86', 5, 5, 5, 0, '2020-05-07 11:38:54'),
-('abhayav.cs18@bmsce.ac.in', '5eb3f4d26c22a', 6, 5, 3, 2, '2020-06-04 12:29:18'),
-('chandanc.cs18@bmsce.ac.in', '5eb3e3b7494aa', 6, 5, 3, 2, '2020-05-07 11:54:04'),
-('dhanrajk.cs18@bmsce.ac.in', '5eb3ef3b3ecba', 6, 5, 3, 2, '2020-05-07 11:56:07'),
-('dhanrajk.cs18@bmsce.ac.in', '5eb3ea47c7b11', 6, 5, 3, 2, '2020-05-07 11:57:20'),
-('sakshay.cs18@bmsce.ac.in', '5eb3ef3b3ecba', 6, 5, 3, 2, '2020-05-07 11:37:55'),
 ('abhayav.cs18@bmsce.ac.in', '5eb3e604084dc', 8, 5, 4, 1, '2020-05-07 11:42:31'),
-('chandanc.cs18@bmsce.ac.in', '5eb3ea47c7b11', 8, 5, 4, 1, '2020-05-07 11:58:55'),
-('sakshay.cs18@bmsce.ac.in', '5eb3ec52c24db', 8, 5, 4, 1, '2020-05-07 11:38:29'),
 ('abhayav.cs18@bmsce.ac.in', '5eb3ea47c7b11', 10, 5, 5, 0, '2020-05-07 11:42:06'),
+('abhayav.cs18@bmsce.ac.in', '5eb3f4d26c22a', 6, 5, 3, 2, '2020-06-04 12:29:18'),
+('chandanc.cs18@bmsce.ac.in', '5eb3de35529a2', 5, 5, 5, 0, '2020-05-07 11:54:32'),
+('chandanc.cs18@bmsce.ac.in', '5eb3e1a5bd9b4', 4, 5, 4, 1, '2020-05-07 11:52:44'),
+('chandanc.cs18@bmsce.ac.in', '5eb3e3b7494aa', 6, 5, 3, 2, '2020-05-07 11:54:04'),
+('chandanc.cs18@bmsce.ac.in', '5eb3e84e4cc86', 5, 5, 5, 0, '2020-05-07 11:53:33'),
+('chandanc.cs18@bmsce.ac.in', '5eb3ea47c7b11', 8, 5, 4, 1, '2020-05-07 11:58:55'),
 ('chandanc.cs18@bmsce.ac.in', '5eb3ef3b3ecba', 10, 5, 5, 0, '2020-05-07 11:53:09'),
-('dhanrajk.cs18@bmsce.ac.in', '5eb3e604084dc', 10, 5, 5, 0, '2020-05-07 11:56:51');
+('dhanrajk.cs18@bmsce.ac.in', '5eb3de35529a2', 1, 5, 1, 4, '2020-06-11 11:29:58'),
+('dhanrajk.cs18@bmsce.ac.in', '5eb3e604084dc', 6, 5, 3, 2, '2020-06-11 11:30:15'),
+('sakshay.cs18@bmsce.ac.in', '5eb3de35529a2', 3, 5, 3, 2, '2020-05-07 11:58:13'),
+('sakshay.cs18@bmsce.ac.in', '5eb3e1a5bd9b4', 4, 5, 4, 1, '2020-05-07 11:40:27'),
+('sakshay.cs18@bmsce.ac.in', '5eb3e604084dc', 4, 5, 2, 3, '2020-05-07 11:39:56'),
+('sakshay.cs18@bmsce.ac.in', '5eb3e84e4cc86', 5, 5, 5, 0, '2020-05-07 11:38:54'),
+('sakshay.cs18@bmsce.ac.in', '5eb3ec52c24db', 8, 5, 4, 1, '2020-05-07 11:38:29'),
+('sakshay.cs18@bmsce.ac.in', '5eb3ef3b3ecba', 6, 5, 3, 2, '2020-05-07 11:37:55');
 
 -- --------------------------------------------------------
 
@@ -424,24 +421,23 @@ CREATE TABLE `quiz` (
   `time` bigint(20) NOT NULL,
   `intro` text NOT NULL,
   `tag` varchar(100) NOT NULL,
-  `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `admin_id` int(11) DEFAULT NULL
+  `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `quiz`
 --
 
-INSERT INTO `quiz` (`eid`, `title`, `sahi`, `wrong`, `total`, `time`, `intro`, `tag`, `date`, `admin_id`) VALUES
-('5eb3de35529a2', 'Practice Quiz - M1', 1, 0, 5, 8, 'Practice quiz of M1 for first years', 'M1', '2020-06-09 10:20:43', 1),
-('5eb3e1a5bd9b4', 'Practice Quiz - Physics', 1, 0, 5, 6, 'Practice quiz for physics ', 'phy', '2020-06-09 10:20:43', 1),
-('5eb3e3b7494aa', 'Practice Quiz - Eee', 2, 0, 5, 10, 'Practice quiz for EEE', 'eee', '2020-06-09 10:20:43', 1),
-('5eb3e604084dc', 'Practice Quiz - Eme', 2, 0, 5, 10, 'Practice quiz for EME', 'eme', '2020-06-09 10:20:43', 1),
-('5eb3e84e4cc86', 'Practice Quiz - Ccp', 1, 0, 5, 7, 'Practice quiz for CCP', 'ccp', '2020-06-09 10:20:43', 1),
-('5eb3ea47c7b11', 'Practice Quiz - Chemistry', 2, 0, 5, 8, 'Practice quiz for chemistry', 'chem', '2020-06-09 10:20:43', 1),
-('5eb3ec52c24db', 'Practice Quiz - M2', 2, 0, 5, 10, 'Practice quiz for M2', 'M2', '2020-06-09 10:20:43', 1),
-('5eb3ef3b3ecba', 'Practice Quiz -  Enm', 2, 0, 5, 7, 'Practice Quiz for ENM', 'enm', '2020-06-09 10:20:43', 1),
-('5eb3f4d26c22a', 'Practice Quiz - Bee', 2, 0, 5, 8, 'Practice quiz for bee', 'bee', '2020-06-09 10:20:43', 1);
+INSERT INTO `quiz` (`eid`, `title`, `sahi`, `wrong`, `total`, `time`, `intro`, `tag`, `date`) VALUES
+('5eb3de35529a2', 'Practice Quiz - M1', 1, 0, 5, 8, 'Practice quiz of M1 for first years', 'M1', '2020-06-09 10:20:43'),
+('5eb3e1a5bd9b4', 'Practice Quiz - Physics', 1, 0, 5, 6, 'Practice quiz for physics ', 'phy', '2020-06-09 10:20:43'),
+('5eb3e3b7494aa', 'Practice Quiz - Eee', 2, 0, 5, 10, 'Practice quiz for EEE', 'eee', '2020-06-09 10:20:43'),
+('5eb3e604084dc', 'Practice Quiz - Eme', 2, 0, 5, 10, 'Practice quiz for EME', 'eme', '2020-06-09 10:20:43'),
+('5eb3e84e4cc86', 'Practice Quiz - Ccp', 1, 0, 5, 7, 'Practice quiz for CCP', 'ccp', '2020-06-09 10:20:43'),
+('5eb3ea47c7b11', 'Practice Quiz - Chemistry', 2, 0, 5, 8, 'Practice quiz for chemistry', 'chem', '2020-06-09 10:20:43'),
+('5eb3ec52c24db', 'Practice Quiz - M2', 2, 0, 5, 10, 'Practice quiz for M2', 'M2', '2020-06-09 10:20:43'),
+('5eb3ef3b3ecba', 'Practice Quiz -  Enm', 2, 0, 5, 7, 'Practice Quiz for ENM', 'enm', '2020-06-09 10:20:43'),
+('5eb3f4d26c22a', 'Practice Quiz - Bee', 2, 0, 5, 8, 'Practice quiz for bee', 'bee', '2020-06-09 10:20:43');
 
 -- --------------------------------------------------------
 
@@ -460,10 +456,10 @@ CREATE TABLE `rank` (
 --
 
 INSERT INTO `rank` (`email`, `score`, `time`) VALUES
-('sakshay.cs18@bmsce.ac.in', 30, '2020-05-07 11:58:13'),
-('abhayav.cs18@bmsce.ac.in', 28, '2020-06-04 12:29:18'),
+('abhayav.cs18@bmsce.ac.in', 30, '2020-06-11 11:27:52'),
 ('chandanc.cs18@bmsce.ac.in', 38, '2020-05-07 11:58:55'),
-('dhanrajk.cs18@bmsce.ac.in', 29, '2020-05-07 11:57:20');
+('dhanrajk.cs18@bmsce.ac.in', 7, '2020-06-11 11:30:15'),
+('sakshay.cs18@bmsce.ac.in', 30, '2020-05-07 11:58:13');
 
 -- --------------------------------------------------------
 
@@ -487,7 +483,7 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`name`, `gender`, `college`, `email`, `mob`, `password`) VALUES
 ('Abhayav', 'M', 'BMSCE', 'abhayav.cs18@bmsce.ac.in', 9945817812, 'e8618f8c43a3b90a0afc698fd3631703'),
 ('Chandancb', 'M', 'BMSCE', 'chandanc.cs18@bmsce.ac.in', 9741672080, '9ca8fdb046c0752d60932e324b26d409'),
-('Dhanrajk', 'M', 'BMSCE', 'dhanrajk.cs18@bmsce.ac.in', 9686425245, '84dc4f0e0d6a37c0baeb817859405067'),
+('Dhanraj', 'M', 'bmsce', 'dhanrajk.cs18@bmsce.ac.in', 9686425245, '84dc4f0e0d6a37c0baeb817859405067'),
 ('Akshaysb', 'M', 'BMSCE', 'sakshay.cs18@bmsce.ac.in', 7892897384, '1394d0ceb88e56794d0078a2a693cfe3');
 
 --
@@ -501,11 +497,18 @@ ALTER TABLE `admin`
   ADD PRIMARY KEY (`admin_id`);
 
 --
+-- Indexes for table `answer`
+--
+ALTER TABLE `answer`
+  ADD PRIMARY KEY (`ansid`,`qid`),
+  ADD KEY `qid` (`qid`);
+
+--
 -- Indexes for table `history`
 --
 ALTER TABLE `history`
-  ADD KEY `eid` (`eid`),
-  ADD KEY `email` (`email`);
+  ADD PRIMARY KEY (`email`,`eid`,`score`),
+  ADD KEY `eid` (`eid`);
 
 --
 -- Indexes for table `options`
@@ -525,14 +528,13 @@ ALTER TABLE `questions`
 --
 ALTER TABLE `quiz`
   ADD PRIMARY KEY (`eid`),
-  ADD UNIQUE KEY `eid` (`eid`),
-  ADD KEY `admin_id` (`admin_id`);
+  ADD UNIQUE KEY `eid` (`eid`);
 
 --
 -- Indexes for table `rank`
 --
 ALTER TABLE `rank`
-  ADD KEY `email` (`email`);
+  ADD PRIMARY KEY (`email`,`score`);
 
 --
 -- Indexes for table `user`
@@ -555,11 +557,17 @@ ALTER TABLE `admin`
 --
 
 --
+-- Constraints for table `answer`
+--
+ALTER TABLE `answer`
+  ADD CONSTRAINT `answer_ibfk_1` FOREIGN KEY (`qid`) REFERENCES `questions` (`qid`);
+
+--
 -- Constraints for table `history`
 --
 ALTER TABLE `history`
-  ADD CONSTRAINT `history_ibfk_1` FOREIGN KEY (`eid`) REFERENCES `quiz` (`eid`),
-  ADD CONSTRAINT `history_ibfk_2` FOREIGN KEY (`email`) REFERENCES `user` (`email`);
+  ADD CONSTRAINT `history_ibfk_2` FOREIGN KEY (`email`) REFERENCES `user` (`email`),
+  ADD CONSTRAINT `history_ibfk_3` FOREIGN KEY (`eid`) REFERENCES `quiz` (`eid`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `options`
@@ -572,12 +580,6 @@ ALTER TABLE `options`
 --
 ALTER TABLE `questions`
   ADD CONSTRAINT `questions_ibfk_1` FOREIGN KEY (`eid`) REFERENCES `quiz` (`eid`);
-
---
--- Constraints for table `quiz`
---
-ALTER TABLE `quiz`
-  ADD CONSTRAINT `quiz_ibfk_1` FOREIGN KEY (`admin_id`) REFERENCES `admin` (`admin_id`);
 
 --
 -- Constraints for table `rank`
