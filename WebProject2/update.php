@@ -3,6 +3,13 @@ include_once 'dbConnection.php';
 session_start();
 $email=$_SESSION['email'];
 //delete feedback
+if(isset($_SESSION['key'])){
+if(@$_GET['fdid'] && $_SESSION['key']=='sunny7785068889') {
+$id=@$_GET['fdid'];
+$result = mysqli_query($con,"DELETE FROM feedback WHERE id='$id' ") or die('Error');
+header("location:dash.php?q=3");
+}
+}
 
 //delete user
 if(isset($_SESSION['key'])){
@@ -43,9 +50,8 @@ $wrong = $_POST['wrong'];
 $time = $_POST['time'];
 $tag = $_POST['tag'];
 $desc = $_POST['desc'];
-$admin_id = (int) $_SESSION['admin_id'];
 $id=uniqid();
-$q3=mysqli_query($con,"INSERT INTO quiz VALUES  ('$id','$name' , '$sahi' , '$wrong','$total','$time' ,'$desc','$tag', NOW(),'$admin_id')");
+$q3=mysqli_query($con,"INSERT INTO quiz VALUES  ('$id','$name' , '$sahi' , '$wrong','$total','$time' ,'$desc','$tag', NOW())");
 
 header("location:dash.php?q=4&step=2&eid=$id&n=$total");
 }
@@ -216,6 +222,3 @@ header("location:account.php?q=quiz&step=2&eid=$eid&n=1&t=$t");
 }
 
 ?>
-
-
-
